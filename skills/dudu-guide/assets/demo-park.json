@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "id": "demo-valley",
+  "name": "溪谷自然园",
+  "mode": "demo",
+  "description": "一座虚构的自然园，让你用一次小小的漫游，试着创造自己的游园搭子。",
+  "map_note": "虚构地点与步行时间。图中为节点关系示意，不是地理地图或现场导航。",
+  "nodes": [
+    {
+      "id": "south-gate",
+      "name": "南门",
+      "kind": "gate",
+      "status": "open",
+      "x": 12,
+      "y": 82
+    },
+    {
+      "id": "north-gate",
+      "name": "北门",
+      "kind": "gate",
+      "status": "open",
+      "x": 88,
+      "y": 15
+    },
+    {
+      "id": "canopy",
+      "name": "林冠观察站",
+      "kind": "venue",
+      "status": "open",
+      "x": 24,
+      "y": 56,
+      "stay_minutes": 20,
+      "observation_prompts": [
+        "留意高处与低处的枝条，想一想不同高度提供了哪些选择。",
+        "找一处可以遮挡视线的地方，记录你看到的空间层次。"
+      ],
+      "not_seen": "暂时没遇见动物，可以先观察树冠、遮蔽处与活动空间。不要拍打、呼喊或投喂来吸引动物。"
+    },
+    {
+      "id": "wetland",
+      "name": "湿地小屋",
+      "kind": "venue",
+      "status": "open",
+      "x": 51,
+      "y": 72,
+      "stay_minutes": 15,
+      "observation_prompts": [
+        "安静站一分钟，记录你能分辨的三种声音。",
+        "比较水边和岸上的植物形态，先描述观察，再提出问题。"
+      ],
+      "not_seen": "先记录水面、植物或光线的变化；没看见动物也是一次真实观察。"
+    },
+    {
+      "id": "habitat",
+      "name": "生境花园",
+      "kind": "venue",
+      "status": "open",
+      "x": 49,
+      "y": 36,
+      "stay_minutes": 25,
+      "observation_prompts": [
+        "找一处阴影与一处阳光，比较它们的环境。",
+        "如果你能设计一个隐蔽角落，会把它放在哪里？"
+      ],
+      "not_seen": "把注意力放在植物、遮蔽和通道设计上；不追逐动物，也不走入非开放区域。"
+    },
+    {
+      "id": "story-house",
+      "name": "保育故事屋",
+      "kind": "venue",
+      "status": "open",
+      "x": 77,
+      "y": 54,
+      "stay_minutes": 20,
+      "observation_prompts": [
+        "挑一块展板，区分它描述的是过去的故事还是今天的状态。",
+        "写下你想问工作人员的一个问题。"
+      ],
+      "not_seen": "可以读一段展板，记录一个问题。不要推测动物今天的位置或健康情况。"
+    },
+    {
+      "id": "lookout",
+      "name": "山顶观察台",
+      "kind": "venue",
+      "status": "open",
+      "x": 72,
+      "y": 22,
+      "stay_minutes": 15,
+      "observation_prompts": [
+        "从远处观察，不靠近或打扰动物。",
+        "给今天最有趣的一次观察起个名字。"
+      ],
+      "not_seen": "看一看环境本身，把没有遇见的动物留作下一次的期待。"
+    }
+  ],
+  "edges": [
+    {
+      "to": "canopy",
+      "minutes": 6,
+      "accessible": true,
+      "bidirectional": true,
+      "basis": "虚构演示步行时间；不是现实道路。",
+      "from": "south-gate"
+    },
+    {
+      "to": "wetland",
+      "minutes": 8,
+      "accessible": true,
+      "bidirectional": true,
+      "basis": "虚构演示步行时间；不是现实道路。",
+      "from": "south-gate"
+    },
+    {
+      "to": "habitat",
+      "minutes": 7,
+      "accessible": true,
+      "bidirectional": true,
+      "basis": "虚构演示步行时间；不是现实道路。",
+      "from": "canopy"
+    },
+    {
+      "to": "habitat",
+      "minutes": 9,
+      "accessible": true,
+      "bidirectional": true,
+      "basis": "虚构演示步行时间；不是现实道路。",
+      "from": "wetland"
+    },
+    {
+      "to": "story-house",
+      "minutes": 7,
+      "accessible": true,
+      "bidirectional": true,
+      "basis": "虚构演示步行时间；不是现实道路。",
+      "from": "wetland"
+    },
+    {
+      "to": "story-house",
+      "minutes": 6,
+      "accessible": true,
+      "bidirectional": true,
+      "basis": "虚构演示步行时间；不是现实道路。",
+      "from": "habitat"
+    },
+    {
+      "to": "lookout",
+      "minutes": 5,
+      "accessible": false,
+      "bidirectional": true,
+      "basis": "虚构演示步行时间；不是现实道路。",
+      "from": "habitat"
+    },
+    {
+      "to": "lookout",
+      "minutes": 11,
+      "accessible": true,
+      "bidirectional": true,
+      "basis": "虚构演示步行时间；不是现实道路。",
+      "from": "story-house"
+    },
+    {
+      "to": "north-gate",
+      "minutes": 5,
+      "accessible": true,
+      "bidirectional": true,
+      "basis": "虚构演示步行时间；不是现实道路。",
+      "from": "lookout"
+    },
+    {
+      "to": "north-gate",
+      "minutes": 12,
+      "accessible": true,
+      "bidirectional": true,
+      "basis": "虚构演示步行时间；不是现实道路。",
+      "from": "story-house"
+    }
+  ],
+  "sources": [
+    {
+      "id": "original-demo",
+      "title": "Dudu 原创虚构场景设定",
+      "publisher": "糖果果 AI 工作室",
+      "license": "MIT",
+      "checked_on": "2026-09-05"
+    }
+  ],
+  "facts": [
+    {
+      "id": "canopy-story",
+      "venue_id": "canopy",
+      "text": "在这个虚构场景里，林冠观察站设置了不同高度的枝条和遮蔽空间，供体验者练习观察生境设计。",
+      "status": "demo",
+      "source_ids": [
+        "original-demo"
+      ]
+    },
+    {
+      "id": "wetland-story",
+      "venue_id": "wetland",
+      "text": "在这个虚构场景里，湿地小屋以水边的声音和植物为观察主题。",
+      "status": "demo",
+      "source_ids": [
+        "original-demo"
+      ]
+    },
+    {
+      "id": "habitat-story",
+      "venue_id": "habitat",
+      "text": "在这个虚构场景里，生境花园通过阴影、阳光和隐蔽角落，邀请体验者思考动物对环境的选择。",
+      "status": "demo",
+      "source_ids": [
+        "original-demo"
+      ]
+    },
+    {
+      "id": "story-house-story",
+      "venue_id": "story-house",
+      "text": "在这个虚构场景里，保育故事屋是一处阅读展板、区分历史故事与现场状态的练习空间。",
+      "status": "demo",
+      "source_ids": [
+        "original-demo"
+      ]
+    },
+    {
+      "id": "lookout-story",
+      "venue_id": "lookout",
+      "text": "在这个虚构场景里，山顶观察台是整理一天观察笔记的地点。",
+      "status": "demo",
+      "source_ids": [
+        "original-demo"
+      ]
+    }
+  ]
+}

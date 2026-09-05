@@ -1,0 +1,15 @@
+{
+  "name": "dudu-guide-skill",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Build your own park companion with your own agent.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "demo": "node skills/dudu-guide/scripts/dudu.mjs init --output output/demo",
+    "start": "node skills/dudu-guide/scripts/dudu.mjs serve --dir output/demo",
+    "validate": "node skills/dudu-guide/scripts/dudu.mjs validate --pack skills/dudu-guide/assets/demo-park.json"
+  },
+  "license": "MIT"
+}

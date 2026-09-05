@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dudu · 游园搭子"
+  short_description: "把红山 Dudu 的游园方法带到新地点，构建自己的规划、观察与手帐工作台"
+  default_prompt: "使用 $dudu-guide，帮我为想去的地点做一个有来源、会规划、能记录发现的游园搭子。"

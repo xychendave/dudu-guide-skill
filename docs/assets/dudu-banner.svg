@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="430" viewBox="0 0 1280 430" role="img" aria-label="Dudu 游园搭子：行前有期待，现场有发现，回来还想再去">
+ <rect width="1280" height="430" rx="24" fill="#e8eedc"/>
+ <path d="M730 430C750 250 1000 420 1090 190S1280 80 1280 80V430Z" fill="#dce5cd"/>
+ <path d="M895 365C1020 340 850 280 975 230S1115 185 1175 75" fill="none" stroke="#91a879" stroke-width="3" stroke-dasharray="7 9"/>
+ <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" fill="#294331">
+  <text x="68" y="75" font-size="13" letter-spacing="4">TANGGUOGUO AI STUDIO / OPEN SOURCE</text>
+  <text x="64" y="172" font-size="70" font-weight="650">Dudu · 游园搭子</text>
+  <text x="68" y="229" font-size="22">用自己的 Agent，为每个地方创造新的发现。</text>
+  <g font-size="15"><text x="69" y="336">01  行前有期待</text><text x="278" y="336">02  现场有发现</text><text x="493" y="336">03  回来还想再去</text></g>
+  <text x="68" y="384" font-size="12" letter-spacing="2" fill="#657557">YOUR AGENT. YOUR PLACE. YOUR DISCOVERIES.</text>
+ </g>
+ <g stroke="#77905d" stroke-width="2">
+  <circle cx="895" cy="365" r="16" fill="#f9faf4"/><circle cx="975" cy="230" r="20" fill="#f9faf4"/><circle cx="1175" cy="75" r="12" fill="#355b43"/>
+ </g>
+ <g transform="translate(1065 270)"><rect x="0" y="0" width="125" height="122" rx="12" fill="#fcfbf2" transform="rotate(7)"/><path d="M43 62C18 58 18 22 43 24C66 26 72 60 43 62" fill="#8ca574"/><path d="M46 89V46M46 68C79 63 87 37 64 40C49 42 44 60 46 68" fill="#688956" stroke="#547646" stroke-width="2"/><path d="M24 103H86" stroke="#d5dcc8" stroke-width="2"/></g>
+ <g transform="translate(920 69)" fill="#6e8959"><path d="M0 40L24 0L48 40Z"/><path d="M-8 62L24 13L56 62Z"/><rect x="20" y="57" width="8" height="28" rx="2"/></g>
+</svg>
