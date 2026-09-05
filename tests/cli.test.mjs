@@ -13,7 +13,8 @@ test('generated starter validates, keeps demo label when renamed, and refuses to
   const tmp = await mkdtemp(join(tmpdir(), 'dudu-cli-'));
   try {
     const output = join(tmp, 'new park');
-    assert.equal(run('init','--output',output,'--name','测试工作台').status,0);
+    const generated = run('init','--output',output,'--name','测试工作台');
+    assert.equal(generated.status,0,generated.stderr);
     const p = JSON.parse(await readFile(join(output,'pack.json'),'utf8'));
     assert.equal(p.mode,'demo'); assert.equal(p.name,'测试工作台');
     assert.equal(run('validate','--pack',join(output,'pack.json')).status,0);
@@ -29,7 +30,8 @@ test('local server serves only public workbench files and rejects external hosts
   let child;
   try {
     const output = join(tmp,'site');
-    assert.equal(run('init','--output',output).status,0);
+    const generated = run('init','--output',output);
+    assert.equal(generated.status,0,generated.stderr);
     await writeFile(join(output,'.env'),'PRIVATE_TEST_DATA');
     await writeFile(join(tmp,'outside.css'),'PRIVATE_TEST_DATA');
     const portProbe = createServer();

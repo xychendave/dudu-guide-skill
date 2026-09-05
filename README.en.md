@@ -2,7 +2,7 @@
 
 **Look forward to your visit. Discover more on site. Leave wanting to return.**
 
-[中文](README.md) · [Hongshan live experience](https://tggai.cn/hongshan-guide/) · [Contributing](CONTRIBUTING.md)
+[中文](README.md) · [Hongshan live experience](https://tggai.cn/hongshan-guide/) · [Download Skill](https://github.com/xychendave/dudu-guide-skill/releases/latest) · [Contributing](CONTRIBUTING.md)
 
 Dudu is an open Agent Skill and local starter kit distilled from the Hongshan Dudu zoo companion, created by Tangguoguo AI Studio. Bring your own agent to build companions for zoos, botanical gardens, museums, parks, and exhibitions.
 

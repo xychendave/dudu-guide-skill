@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import {readFile, writeFile, mkdir, cp, stat, realpath} from 'node:fs/promises';
+import {readFile, writeFile, mkdir, cp, stat, realpath, readdir} from 'node:fs/promises';
 import {createServer} from 'node:http';
 import {resolve, dirname, join, extname, sep} from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -31,7 +31,12 @@ async function main() {
     catch (error) { if (error.code !== 'ENOENT') throw error; }
     await mkdir(dirname(output), {recursive: true});
     await mkdir(output);
-    await cp(join(skill, 'assets/workbench'), output, {recursive: true, force: false, errorOnExist: true});
+    const template = join(skill, 'assets/workbench');
+    // Keep the exclusive mkdir above. Older Node versions reject copying the
+    // template directory onto that existing directory with errorOnExist.
+    for (const entry of await readdir(template)) {
+      await cp(join(template, entry), join(output, entry), {recursive: true, force: false, errorOnExist: true});
+    }
     await cp(join(skill, 'LICENSE'), join(output, 'LICENSE'), {force: false, errorOnExist: true});
     await writeFile(join(output, 'pack.json'), JSON.stringify(pack, null, 2) + '\n', {flag: 'wx'});
     await writeFile(join(output, '.gitignore'), '.env\n.env.*\nprivate/\n*.log\n', {flag: 'wx'});

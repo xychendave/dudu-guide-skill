@@ -6,7 +6,7 @@
 
 让每个人都能用自己的 Agent，为不同地方构建自己的游园搭子。
 
-[红山在线体验](https://tggai.cn/hongshan-guide/) · [快速开始](#快速开始) · [安装 Skill](#把它交给你的-agent) · [共建指南](CONTRIBUTING.md) · [English](README.en.md)
+[红山在线体验](https://tggai.cn/hongshan-guide/) · [快速开始](#快速开始) · [下载 Skill](https://github.com/xychendave/dudu-guide-skill/releases/latest) · [安装 Skill](#把它交给你的-agent) · [共建指南](CONTRIBUTING.md) · [English](README.en.md)
 
 ![Dudu：从一张地图到一次更丰富的游园体验](docs/assets/dudu-banner.svg)
 
